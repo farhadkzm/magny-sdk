@@ -1,0 +1,26 @@
+{
+  "name": "magny-sdk",
+  "version": "1.0.0",
+  "description": "SDK to communicate to Magny backend APIs",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^26.0.1"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farhadkzm/magny-sdk.git"
+  },
+  "keywords": [
+    "Magny"
+  ],
+  "author": "Farhad Kazemi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/farhadkzm/magny-sdk/issues"
+  },
+  "homepage": "https://github.com/farhadkzm/magny-sdk#readme"
+}
