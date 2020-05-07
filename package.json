@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "SDK to communicate to Magny backend APIs",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "yup": "^0.28.5"
+  },
   "devDependencies": {
     "jest": "^26.0.1"
   },
