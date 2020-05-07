@@ -26,8 +26,9 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: node -e "console.log(require('./package.json').version);" > version.txt
-      - run: npm version $(cat version.txt).${GITHUB_RUN_NUMBER}
+      - run: npm version ${SEM_VER}.${GITHUB_RUN_NUMBER}
+        env:
+          SEM_VER: '1.0'
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
