@@ -26,7 +26,7 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: npm version ${SEM_VER}.${GITHUB_RUN_NUMBER}
+      - run: npm version ${SEM_VER}.${GITHUB_RUN_NUMBER} --no-git-tag-version
         env:
           SEM_VER: '1.0'
       - run: npm publish
