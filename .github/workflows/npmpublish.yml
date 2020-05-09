@@ -33,3 +33,5 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
       - run: npm install -g codecov && codecov
+        env:
+          CODECOV_TOKEN: ${{secrets.codecov_token}}
