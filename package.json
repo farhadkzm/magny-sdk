@@ -9,6 +9,10 @@
   "devDependencies": {
     "jest": "^26.0.1"
   },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  },
   "scripts": {
     "test": "jest"
   },
