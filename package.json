@@ -7,14 +7,17 @@
     "yup": "^0.28.5"
   },
   "devDependencies": {
-    "jest": "^26.0.1"
+    "jest": "^26.0.1",
+    "jsdoc": "^3.6.4",
+    "minami": "^1.2.3"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
     "collectCoverage": true
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "generate-docs": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose"
   },
   "repository": {
     "type": "git",

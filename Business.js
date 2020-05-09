@@ -86,19 +86,19 @@ class Business {
 
     /**
      *
-     * @param obj properties to populate the class from
+     * @param prop properties to populate the class from
      * @returns {Business} a proper instantiated class
      */
-    static from(obj) {
-        return Object.assign(new Business, obj);
+    static from(prop) {
+        return Object.assign(new Business(), prop)
     }
 
     /**
      * Validates the object
-     * @returns {*} list of validation errors or a casted version of the class
+     * @returns {*} Casted version of this object or throws Validation errors
      */
-    isValid() {
-        return Business.schema.isValid(this);
+    validate() {
+        return Business.schema.validateSync(this);
     }
 
     /**
@@ -106,10 +106,9 @@ class Business {
      * @param obj Object to be validated against the class's schema
      * @returns {*} list of validation errors or a casted version of the obj
      */
-    validate(obj) {
-        return Business.schema.isValid(obj);
+    static validateObject(obj) {
+        return Business.schema.validateSync(obj);
     }
-
 }
 
 module.exports = Business

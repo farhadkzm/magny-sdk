@@ -3,7 +3,10 @@
 
 name: Node.js Package
 
-on: push
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
@@ -29,9 +32,12 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: npm version ${SEM_VER}.${GITHUB_RUN_NUMBER} --no-git-tag-version
-        env:
-          SEM_VER: '1.0'
+      - run: npm version 1.0.${GITHUB_RUN_NUMBER} --no-git-tag-version
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+      - run: echo '::set-env name=publish_dir::./docs/magny-sdk/1.0.${GITHUB_RUN_NUMBER}'
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: master
