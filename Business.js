@@ -69,7 +69,7 @@ class Business {
         tags: yup.array(yup.string()),
         category: yup.string().required(),
         name: yup.string().required(),
-        description: yup.string().required(),
+        description: yup.string(),
         ownerId: yup.string(),
         images: yup.array(yup.string()),
         imageCover: yup.string(),
