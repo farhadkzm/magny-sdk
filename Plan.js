@@ -8,25 +8,25 @@ class Plan {
     /**
      * Name of the plan to be shown to the user
      * @type {string} */
-    name;
+    name = undefined;
     /**
      * Id of the plan
      * @readonly
      * @type {string} */
-    id;
+    id = undefined;
 
     /**
      * Features of the plan
      * @type {string[]} */
-    features;
+    features = undefined;
 
     /** @type {number} */
-    price;
+    price = undefined;
 
     /**
      * Extra features that users can choose.
      * @type {Array} */
-    options;
+    options = undefined;
 
     /**
      * Schema to validate the object

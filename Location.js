@@ -8,11 +8,11 @@ class Location {
     /**
      * Human readable address of the geo location
      * @type {string} */
-    address;
+    address = undefined;
     /** @type {number} */
-    lng;
+    lng = undefined;
     /** @type {number} */
-    lat;
+    lat = undefined;
 
     /**
      * Schema to validate the object
