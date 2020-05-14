@@ -18,6 +18,12 @@ jobs:
           node-version: 10
       - run: npm ci
       - run: npm test
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
       - run: npm version 1.0.${GITHUB_RUN_NUMBER} --no-git-tag-version
       - run: npm publish
         env:
