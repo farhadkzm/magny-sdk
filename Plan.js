@@ -1,4 +1,4 @@
-const yup = require('yup')
+import yup from 'yup'
 
 /**
  * Represents a plan that users can purchase in Magny

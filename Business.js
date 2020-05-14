@@ -1,5 +1,5 @@
-const yup = require('yup')
-const Location = require('./Location')
+import yup from 'yup'
+import Location from './Location'
 
 /**
  * Represents a business in Magny
@@ -9,14 +9,14 @@ class Business {
     /**
      * Geo location of the business
      * @type {Location} */
-    location;
+    location
     /**
      * Array of tags
      * @type {string[]} */
-    tags;
+    tags
 
     /** @type {string} */
-    category;
+    category
 
     /** @type {string} */
     name;
@@ -30,9 +30,34 @@ class Business {
     ownerId;
 
     /**
+     * UID of the user who has created this business
+     * @type {string} */
+    creatorId;
+
+    /**
      * List of image URIs
      * @type {string[]} */
     images;
+
+    /**
+     * List of image URIs
+     * @type {string[]} */
+    priceList;
+
+    /**
+     * List of image URIs
+     * @type {string[]} */
+    followers;
+
+    /**
+     * List of image URIs
+     * @type {string[]} */
+    thanks;
+
+    /**
+     * List of image URIs
+     * @type {string[]} */
+    likes;
 
     /**
      * Image URI of the cover image
