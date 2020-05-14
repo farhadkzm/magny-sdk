@@ -5,14 +5,6 @@ import yup from 'yup'
  * @class
  */
 class Location {
-    /**
-     * Human readable address of the geo location
-     * @type {string} */
-    address = undefined;
-    /** @type {number} */
-    lng = undefined;
-    /** @type {number} */
-    lat = undefined;
 
     /**
      * Schema to validate the object

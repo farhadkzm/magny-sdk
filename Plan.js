@@ -5,28 +5,6 @@ import yup from 'yup'
  * @class
  */
 class Plan {
-    /**
-     * Name of the plan to be shown to the user
-     * @type {string} */
-    name = undefined;
-    /**
-     * Id of the plan
-     * @readonly
-     * @type {string} */
-    id = undefined;
-
-    /**
-     * Features of the plan
-     * @type {string[]} */
-    features = undefined;
-
-    /** @type {number} */
-    price = undefined;
-
-    /**
-     * Extra features that users can choose.
-     * @type {Array} */
-    options = undefined;
 
     /**
      * Schema to validate the object
