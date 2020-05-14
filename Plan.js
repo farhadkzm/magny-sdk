@@ -9,18 +9,20 @@ class Plan {
     /**
      * Schema to validate the object
      */
-    static schema = yup.object().shape({
-        id: yup.string().required(),
-        name: yup.string().required(),
-        features: yup.array(yup.string()),
-        price: yup.number().positive().required(),
-        options: yup.array(yup.object().shape({
+    static getSchema() {
+        return yup.object().shape({
             id: yup.string().required(),
-            title: yup.string(),
-            price: yup.number().positive().required()
-        }))
+            name: yup.string().required(),
+            features: yup.array(yup.string()),
+            price: yup.number().positive().required(),
+            options: yup.array(yup.object().shape({
+                id: yup.string().required(),
+                title: yup.string(),
+                price: yup.number().positive().required()
+            }))
+        });
+    };
 
-    });
 
     /**
      *
@@ -36,7 +38,7 @@ class Plan {
      * @returns {*} Casted version of this object or throws Validation errors
      */
     validate() {
-        return Plan.schema.validateSync(this);
+        return Plan.getSchema().validateSync(this);
     }
 
     /**
@@ -45,8 +47,8 @@ class Plan {
      * @returns {*} list of validation errors or a casted version of the obj
      */
     static validateObject(obj) {
-        return Plan.schema.validateSync(obj);
+        return Plan.getSchema().validateSync(obj);
     }
 }
 
-module.exports = Plan
+export default Plan

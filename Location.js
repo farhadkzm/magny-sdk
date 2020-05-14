@@ -9,11 +9,13 @@ class Location {
     /**
      * Schema to validate the object
      */
-    static schema = yup.object().shape({
-        address: yup.string().min(10).required(),
-        lng: yup.number().min(-180).max(180).required(),
-        lat: yup.number().min(-90).max(90).required(),
-    });
+    static getSchema() {
+        return yup.object().shape({
+            address: yup.string().min(10).required(),
+            lng: yup.number().min(-180).max(180).required(),
+            lat: yup.number().min(-90).max(90).required(),
+        });
+    };
 
     /**
      *
@@ -29,7 +31,7 @@ class Location {
      * @returns {*} Casted version of this object or throws Validation errors
      */
     validate() {
-        return Location.schema.validateSync(this);
+        return Location.getSchema().validateSync(this);
     }
 
     /**
@@ -38,9 +40,9 @@ class Location {
      * @returns {*} list of validation errors or a casted version of the obj
      */
     static validateObject(obj) {
-        return Location.schema.validateSync(obj);
+        return Location.getSchema().validateSync(obj);
     }
 
 }
 
-module.exports = Location
+export default Location
