@@ -19,6 +19,9 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm version 1.0.${GITHUB_RUN_NUMBER} --no-git-tag-version
+      - run: npm adduser --registry=https://registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
