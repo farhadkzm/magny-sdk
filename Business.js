@@ -9,82 +9,82 @@ class Business {
     /**
      * Geo location of the business
      * @type {Location} */
-    location
+    location = undefined;
     /**
      * Array of tags
      * @type {string[]} */
-    tags
+    tags = undefined;
 
     /** @type {string} */
-    category
+    category = undefined;
 
     /** @type {string} */
-    name;
+    name = undefined;
 
     /** @type {string} */
-    description;
+    description = undefined;
 
     /**
      * UID of the user who owns this business
      * @type {string} */
-    ownerId;
+    ownerId = undefined;
 
     /**
      * UID of the user who has created this business
      * @type {string} */
-    creatorId;
+    creatorId = undefined;
 
     /**
      * List of image URIs
      * @type {string[]} */
-    images;
+    images = undefined;
 
     /**
      * List of image URIs
      * @type {string[]} */
-    priceList;
+    priceList = undefined;
 
     /**
      * List of image URIs
      * @type {string[]} */
-    followers;
+    followers = undefined;
 
     /**
      * List of image URIs
      * @type {string[]} */
-    thanks;
+    thanks = undefined;
 
     /**
      * List of image URIs
      * @type {string[]} */
-    likes;
+    likes = undefined;
 
     /**
      * Image URI of the cover image
      * @type {string} */
-    imageCover;
+    imageCover = undefined;
 
     /**
      * @type {string} */
-    phone;
+    phone = undefined;
 
     /**
      * @type {string} */
-    email;
+    email = undefined;
 
     /**
      * @type {string} */
-    web;
+    web = undefined;
 
     /**
      * Working hours of the business. For more details look at schema.workingHours.
      * @type {Array} */
-    workingHours;
+    workingHours = undefined;
 
     /**
      * Plan Id that the owner has purchased for this business
      * @type {string} */
-    planId;
+    planId = undefined;
 
     /**
      * Schema to validate the object
@@ -136,4 +136,4 @@ class Business {
     }
 }
 
-module.exports = Business
+export default Business;

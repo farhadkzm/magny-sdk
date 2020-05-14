@@ -1,6 +1,7 @@
-const Business = require('./Business')
-const Location = require('./Location')
-const Plan = require('./Plan')
+import Business from './Business';
+import Location from './Location';
+import Plan from './Plan';
+
 module.exports = {
     Business,
     Location,
