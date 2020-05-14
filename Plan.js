@@ -1,4 +1,4 @@
-import yup from 'yup'
+const yup = require('yup')
 
 /**
  * Represents a plan that users can purchase in Magny
@@ -51,4 +51,4 @@ class Plan {
     }
 }
 
-export default Plan
+module.exports = Plan

@@ -1,4 +1,4 @@
-import yup from 'yup'
+const yup = require('yup')
 
 /**
  * Represents a geo location
@@ -45,4 +45,4 @@ class Location {
 
 }
 
-export default Location
+module.exports = Location

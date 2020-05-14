@@ -1,5 +1,5 @@
-import yup from 'yup'
-import Location from './Location'
+const yup = require('yup')
+const Location = require('./Location')
 
 /**
  * Represents a business in Magny
@@ -59,4 +59,4 @@ class Business {
     }
 }
 
-export default Business;
+module.exports = Business;
